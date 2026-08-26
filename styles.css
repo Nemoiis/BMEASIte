@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* ============================================================
+   RESET
+   ============================================================ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+/* ============================================================
+   CSS VARIABLES
+   ============================================================ */
+:root {
+    --bg-color: #0f1526;
+    --card: #171d33;
+    --bg-elevated: #243050;
+    --accent: #ff6b1a;
+    --accent-blue: #38bdf8;
+    --text: #e8eef8;
+    --text-muted: #888888;
+    --font-Os: "Oswald", sans-serif;
+    --font-Mont: "Montserrat", sans-serif;
+    --font-Open: "Open Sans", sans-serif;
+}
+.hero{
+    position:relative;
+}
+
+.hero-img{
+    height:85vh;
+    width:99vw;
+}
+#logo{
+    height: autopx;
+    width: 100px;
+}
+
+nav {
+    justify-content: space-between;
+    display:flex;
+    padding: 20px 32px;
+    position: absolute;
+    height: 55px;
+    width:100%;
+    left:0;
+    top:0;
+    transition: box-shadow .5s ease-in-out;
+}
+nav:hover{
+transition: box-shadow .5s ease-in-out;
+box-shadow: 0 5px 12px rgba(0,0,0,0.206);
+}
+
+.logo-container{
+    display:flex;
+    align-items: center;
+    padding:0px;
+    flex-shrink: 0;
+    
+}
+
+.logo-text{
+    padding:10px;
+    font-family: var(--font-Os);
+    font-weight:400;
+    line-height:26.88px;
+    font-size: 21.33px;
+    color: var(--accent-blue);
+}
+
+.nav-links-wrapper{
+    display:flex;
+    width:auto;
+}
+
+.nav-links{
+    font-family:var(--font-Open) ;
+    display:flex;
+    flex-shrink: 0;
+    gap:2em;
+    list-style: none;
+    font-size: 16px;
+    align-items: center;
+    line-height: 30.08px;
+    padding:0px 10px;
+    
+
+}
+
+.nav-links a{
+    color:#ffffff;
+    text-decoration: none;
+    
+}
+
+.nav-links a:hover{
+    color:var(--text-muted);
+}
+
+.nav-links a:visited{
+    color:#ffffff;
+    ;
+}
+
+.text{
+    margin:50px 250px;
+}
+
+#header-text{
+    font-family:var(--font-Mont);
+    font-size: 23px;
+}
+
+#overlay{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    top:0;
+    left:0;
+    background: linear-gradient(to top, transparent 0%, var(--bg-color) 95%);
+    z-index: -1;
+
+}
+
+#BMEADev{
+    color:red;
+}
+
+.primary-contact{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    margin: 100px;
+    width: 500px;
+}
+
+
+
+
+
+
+
+
