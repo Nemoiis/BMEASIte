@@ -14,12 +14,12 @@
    CSS VARIABLES
    ============================================================ */
 :root {
-    --bg-color: #0f1526;
-    --card: #171d33;
+    --bg-color: #040404;
+    --card: #f3f3f3;
     --bg-elevated: #243050;
     --accent: #ff6b1a;
-    --accent-blue: #38bdf8;
-    --text: #e8eef8;
+    --accent-blue: #1493ef;
+    --text: #f3f3f3;
     --text-muted: #888888;
     --font-Os: "Oswald", sans-serif;
     --font-Mont: "Montserrat", sans-serif;
@@ -68,7 +68,7 @@ box-shadow: 0 5px 12px rgba(0,0,0,0.206);
     font-weight:400;
     line-height:26.88px;
     font-size: 21.33px;
-    color: var(--accent-blue);
+    color: var(--text);
 }
 
 .nav-links-wrapper{
@@ -122,8 +122,24 @@ box-shadow: 0 5px 12px rgba(0,0,0,0.206);
     top:0;
     left:0;
     background: linear-gradient(to top, transparent 0%, var(--bg-color) 95%);
-    z-index: -1;
+    z-index: 0;
 
+}
+.hero-text-container{
+    width:100vh;
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-blue);
+    font-size: 30px;
+    font-family: var(--font-Os);
+    text-shadow: 0 10px 8px rgba(0,0,0,0.6);
+    max-width: 900px; 
+    margin: 0 auto;
+    text-decoration: underline;
+    text-decoration-color:white;
 }
 
 #BMEADev{
@@ -132,15 +148,57 @@ box-shadow: 0 5px 12px rgba(0,0,0,0.206);
 
 .primary-contact{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    background-color: #ffffff;
-    margin: 100px;
-    width: 500px;
+    width:650px;
+    height: 100px;
+    border:solid;
+    border-radius: 10px;
+    border-color: var(--text);
+    background-color: var(--accent-blue);
+    margin:0 auto;
+    margin-top:15px;
 }
 
+.website-embed-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ffffff;
+}
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute; 
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Gives it depth */
+  z-index: 1; 
+}
+
+.dropdown-content a {
+    color: black !important;
+    padding: 5px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 
 
