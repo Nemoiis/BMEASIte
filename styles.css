@@ -1,18 +1,16 @@
+/* ============================================================
+   All Pages
+   ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-/* ============================================================
-   RESET
-   ============================================================ */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-} 
+}
 
-/* ============================================================
-   CSS VARIABLES
-   ============================================================ */
 :root {
     --bg-color: #040404;
     --card: #f3f3f3;
@@ -25,162 +23,130 @@
     --font-Mont: "Montserrat", sans-serif;
     --font-Open: "Open Sans", sans-serif;
 }
-.hero{
-    position:relative;
+
+.hero {
+    position: relative;
 }
 
-.hero-img{
-    height:85vh;
-    width:99vw;
-}
-#logo{
-    height: autopx;
-    width: 100px;
+.hero-img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
 }
 
-nav {
-    justify-content: space-between;
-    display:flex;
-    padding: 20px 32px;
+#overlay {
     position: absolute;
-    height: 55px;
-    width:100%;
-    left:0;
-    top:0;
-    transition: box-shadow .5s ease-in-out;
-}
-nav:hover{
-transition: box-shadow .5s ease-in-out;
-box-shadow: 0 5px 12px rgba(0,0,0,0.206);
-}
-
-.logo-container{
-    display:flex;
-    align-items: center;
-    padding:0px;
-    flex-shrink: 0;
-    
-}
-
-.logo-text{
-    padding:10px;
-    font-family: var(--font-Os);
-    font-weight:400;
-    line-height:26.88px;
-    font-size: 21.33px;
-    color: var(--text);
-}
-
-.nav-links-wrapper{
-    display:flex;
-    width:auto;
-}
-
-.nav-links{
-    font-family:var(--font-Open) ;
-    display:flex;
-    flex-shrink: 0;
-    gap:2em;
-    list-style: none;
-    font-size: 16px;
-    align-items: center;
-    line-height: 30.08px;
-    padding:0px 10px;
-    
-
-}
-
-.nav-links a{
-    color:#ffffff;
-    text-decoration: none;
-    
-}
-
-.nav-links a:hover{
-    color:var(--text-muted);
-}
-
-.nav-links a:visited{
-    color:#ffffff;
-    ;
-}
-
-.text{
-    margin:50px 250px;
-}
-
-#header-text{
-    font-family:var(--font-Mont);
-    font-size: 23px;
-}
-
-#overlay{
-    position:absolute;
     width: 100%;
     height: 100%;
     background-color: green;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     background: linear-gradient(to top, transparent 0%, var(--bg-color) 95%);
     z-index: 0;
-
 }
-.hero-text-container{
-    width:100vh;
+
+.hero-text-container {
+    width: 100vh;
     position: absolute;
     text-align: center;
-    top:50%;
-    left:50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: var(--accent-blue);
     font-size: 30px;
     font-family: var(--font-Os);
     text-shadow: 0 10px 8px rgba(0,0,0,0.6);
-    max-width: 900px; 
+    max-width: 900px;
     margin: 0 auto;
     text-decoration: underline;
-    text-decoration-color:white;
+    text-decoration-color: white;
 }
 
-#BMEADev{
-    color:red;
+#BMEADev {
+    color: red;
 }
 
-.primary-contact{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:650px;
-    height: 100px;
-    border:solid;
-    border-radius: 10px;
-    border-color: var(--text);
-    background-color: var(--accent-blue);
-    margin:0 auto;
-    margin-top:15px;
-}
-
-.website-embed-container{
+nav {
+    justify-content: space-between;
     display: flex;
-    justify-content: center;
+    padding: 20px 32px;
+    position: absolute;
+    height: 55px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: box-shadow .5s ease-in-out;
+}
+
+nav:hover {
+    transition: box-shadow .5s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.206);
+}
+
+#logo {
+    height: autopx;
+    width: 100px;
+}
+
+.logo-container {
+    display: flex;
     align-items: center;
-    flex-direction: row;
-    background-color: #ffffff;
+    padding: 0px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    padding: 10px;
+    font-family: var(--font-Os);
+    font-weight: 400;
+    line-height: 26.88px;
+    font-size: 21.33px;
+    color: var(--text);
+}
+
+.nav-links-wrapper {
+    display: flex;
+    width: auto;
+}
+
+.nav-links {
+    font-family: var(--font-Open);
+    display: flex;
+    flex-shrink: 0;
+    gap: 2em;
+    list-style: none;
+    font-size: 16px;
+    align-items: center;
+    line-height: 30.08px;
+    padding: 0px 10px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: var(--text-muted);
+}
+
+.nav-links a:visited {
+    color: #ffffff;
+    ;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown-content {
-  display: none; 
-  position: absolute; 
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Gives it depth */
-  z-index: 1; 
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+    z-index: 1;
 }
 
 .dropdown-content a {
@@ -193,15 +159,1626 @@ box-shadow: 0 5px 12px rgba(0,0,0,0.206);
 }
 
 .dropdown-content a:hover {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
+.text {
+    margin: 50px 250px;
+}
 
+#header-text {
+    font-family: var(--font-Mont);
+    font-size: 23px;
+}
 
+/* ============================================================
+   Home Page
+   ============================================================ */
+.primary-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 100px;
+    border: solid;
+    border-radius: 10px;
+    background-color: var(--accent-blue);
+    margin: 0 auto;
+    margin-top: 30px;
+}
 
+/* ============================================================
+   Home, Schedule of Events, and SCM Portal Pages
+   ============================================================ */
+.website-embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ffffff;
+}
 
+.website-embed-container, #calendar{
+    margin-top:10px;
+}
 
+/* ============================================================
+   All Pages
+   ============================================================ */
+.text-wrapper{
+        margin: 50px 250px;
+}
+
+/* ============================================================
+   YLDP Page
+   ============================================================ */
+#statIntro,
+#sum {
+    font-family: var(--font-Os);
+    color: var(--accent-blue);
+    font-size: 26px;
+    margin: 40px 0 16px;
+}
+
+.stat-bar {
+    display: flex;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    padding: 28px 10px;
+    margin: 0;
+    height: auto;
+    border: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.stat-bar-list {
+    display: flex;
+    width: 100%;
+    list-style: none;
+}
+
+.stat-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-align: center;
+    font-family: var(--font-Os);
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--accent-blue);
+}
+
+.stat-text:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.metric {
+    margin-top: 6px;
+    font-family: var(--font-Open);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.legend {
+    font-family: var(--font-Open);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin: 0 4px 0 0;
+}
+.legend .swatch:not(:first-child) { margin-left: 16px; }
+.bar.pre  { background-color: var(--text-muted); }
+.bar.post { background-color: var(--accent-blue); }
+
+.chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: auto;
+    margin: 0;
+    padding: 24px 30px 14px;
+    background-color: #f5f7fa;
+    border: none;
+    border-radius: 12px;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 125px;
+}
+
+.bar {
+    width: 28px;
+    border-radius: 4px 4px 0 0;
+}
+
+.swatch.pre  { background-color: var(--text-muted); }
+.swatch.post { background-color: var(--accent-blue); }
+
+.bar-label {
+    font-family: var(--font-Open);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.teamWrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.teamMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.teamMember:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.portrait {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--accent-blue);
+}
+
+.teamMember h2 {
+    font-family: var(--font-Os);
+    font-size: 22px;
+    margin-top: 14px;
+    text-align: center;
+}
+
+/* ============================================================
+   Field Trip Page
+   ============================================================ */
+.tripWrapper {
+    display: flex;
+    margin: 50px 250px;
+    border-radius: 16px;
+    background-color: var(--bg-color);
+    color: var(--text);
+    gap: 30px;
+    align-items: flex-start;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.tripPoster {
+    width: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0;
+}
+
+.tripInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tripInfo h2 {
+    font-family: var(--font-Os);
+    font-size: 26px;
+    margin: 0;
+}
+
+.tripInfo p {
+    font-family: var(--font-Open);
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.date {
+    display: inline-block;
+    font-family: var(--font-Open);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    background-color: rgba(20,147,239,0.15);
+    padding: 4px 12px;
+    border-radius: 999px;
+    width: fit-content;
+}
+
+.perms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 250px 60px;
+}
+
+/* ============================================================
+   Forms Page
+   ============================================================ */
+.onboarding {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: var(--bg-color);
+}
+
+.embedWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.embedWrapper h1 {
+    font-family: var(--font-Os);
+    color: var(--accent-blue);
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+.embedWrapper p {
+    font-family: var(--font-Open);
+    line-height: 1.6;
+    color: var(--text);
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+.permission {
+    border-radius: 12px;
+}   
+
+.additionalForms {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 60px;
+}
+
+.linkList {
+    margin: 0 250px;
+    font-family: var(--font-Open);
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formLink {
+    display: block;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 600;
+    background-color: var(--card);
+    padding: 16px 20px;
+    border-radius: 10px;
+}
+
+.formLink:hover {
+    background-color: rgba(20,147,239,0.12);
+}
+
+/* ============================================================
+   Multiple Pages
+   ============================================================ */
+.sectionTitle {
+    font-family: var(--font-Os);
+    color: var(--accent-blue);
+    font-size: 26px;
+    margin: 50px 0 16px;
+}
+
+.sectionNote {
+    font-family: var(--font-Open);
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444444;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.sourceNote {
+    font-family: var(--font-Open);
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-Open);
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--accent-blue);
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color .3s ease;
+}
+
+.btn:hover {
+    background-color: #0f7acb;
+}
+
+.btnOutline {
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,0.4);
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.btnOutline:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.infoGrid.four {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.infoCard {
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    padding: 26px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.infoCard h3 {
+    font-family: var(--font-Os);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.infoCard p {
+    font-family: var(--font-Open);
+    line-height: 1.6;
+    color: #333333;
+}
+
+.infoCard a {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: var(--font-Open);
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.infoCard a:hover {
+    text-decoration: underline;
+}
+
+.darkPanel {
+    background-color: var(--bg-color);
+    color: var(--text);
+    border-radius: 16px;
+    padding: 36px 40px;
+    margin-top: 50px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.darkPanel h2 {
+    font-family: var(--font-Os);
+    font-size: 32px;
+    color: var(--accent-blue);
+    margin-bottom: 10px;
+}
+
+.darkPanel p {
+    font-family: var(--font-Open);
+    line-height: 1.6;
+    max-width: 720px;
+    margin-bottom: 22px;
+}
+
+.statPanel {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.statPanel p {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.bigStat {
+    font-family: var(--font-Os);
+    font-size: 64px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.pillList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pillList li {
+    font-family: var(--font-Os);
+    font-size: 19px;
+    color: var(--accent-blue);
+    background-color: rgba(20,147,239,0.12);
+    padding: 8px 20px;
+    border-radius: 999px;
+}
+
+.valuesIntro {
+    margin-top: 30px;
+}
+
+.resourceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 16px;
+}
+
+.resourceCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #f5f7fa;
+    border-radius: 10px;
+    padding: 16px 18px;
+    text-decoration: none;
+    color: var(--bg-color);
+    transition: background-color .3s ease;
+}
+
+.resourceCard:hover {
+    background-color: rgba(20,147,239,0.12);
+}
+
+.resourceTag {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--accent-blue);
+    font-family: var(--font-Open);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.resourceName {
+    display: block;
+    font-family: var(--font-Os);
+    font-size: 19px;
+}
+
+.resourceSource {
+    display: block;
+    font-family: var(--font-Open);
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   School Partners Page
+   ============================================================ */
+.scheduleList {
+    list-style: none;
+    border-top: 1px solid #e3e6ea;
+}
+
+.scheduleList li {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid #e3e6ea;
+}
+
+.scheduleTime {
+    font-family: var(--font-Os);
+    font-size: 24px;
+    color: var(--accent-blue);
+}
+
+.scheduleInfo h3 {
+    font-family: var(--font-Os);
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.scheduleInfo p {
+    font-family: var(--font-Open);
+    line-height: 1.6;
+    color: #333333;
+}
+
+.partnerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+.partnerCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    border: 1px solid #e3e6ea;
+    border-radius: 12px;
+}
+
+.partnerLogo {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    color: var(--accent-blue);
+    font-family: var(--font-Os);
+    font-size: 22px;
+}
+
+.partnerCard h3 {
+    font-family: var(--font-Os);
+    font-size: 20px;
+}
+
+.partnerCard p {
+    font-family: var(--font-Open);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   Orientation and SC Portal Pages
+   ============================================================ */
+.modelStack {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modelLayer {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 18px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    padding: 16px 22px;
+}
+
+.modelStack li:nth-child(1) { margin: 0 120px; }
+.modelStack li:nth-child(2) { margin: 0 80px; }
+.modelStack li:nth-child(3) { margin: 0 40px; }
+
+.modelNumber {
+    font-family: var(--font-Os);
+    font-size: 28px;
+    color: var(--accent-blue);
+}
+
+.modelLayer h3 {
+    font-family: var(--font-Os);
+    font-size: 21px;
+}
+
+.modelLayer p {
+    font-family: var(--font-Open);
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444444;
+}
+
+.modelLayer.held {
+    background-color: transparent;
+    border: 2px dashed var(--accent-blue);
+}
+
+.modelLayer.current {
+    background-color: var(--bg-color);
+    color: var(--text);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.modelLayer.current p {
+    color: var(--text);
+}
+
+.youTag {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: var(--font-Open);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    background-color: rgba(20,147,239,0.15);
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+/* ============================================================
+   Orientation Page
+   ============================================================ */
+.checkList {
+    list-style: none;
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.checkList li {
+    counter-increment: step;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-family: var(--font-Open);
+    font-size: 17px;
+}
+
+.checkList li::before {
+    content: counter(step);
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    color: var(--accent-blue);
+    font-family: var(--font-Os);
+    font-size: 18px;
+}
+
+.checkList a {
+    margin-left: auto;
+    white-space: nowrap;
+    font-weight: 700;
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.checkList a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   Mentees Page
+   ============================================================ */
+.quoteGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.quoteCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+    background-color: var(--bg-color);
+    color: var(--text);
+    border-radius: 14px;
+    padding: 28px 26px;
+}
+
+.quoteCard p {
+    font-family: var(--font-Mont);
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.quoteCard span {
+    font-family: var(--font-Open);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-blue);
+}
+
+.familyQuote {
+    margin-top: 24px;
+}
+
+.shiftChart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    padding: 26px 30px;
+}
+
+.shiftRow {
+    display: grid;
+    grid-template-columns: 100px 1fr 150px;
+    align-items: center;
+    gap: 18px;
+}
+
+.shiftLabel {
+    font-family: var(--font-Open);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.shiftTrack {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.shiftBar {
+    height: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+.shiftBar.pre  { background-color: var(--text-muted); }
+.shiftBar.post { background-color: var(--accent-blue); }
+
+.shiftValue {
+    font-family: var(--font-Os);
+    font-size: 22px;
+    color: var(--accent-blue);
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ============================================================
+   Orientation, SC Portal, and Extras Pages
+   ============================================================ */
+.videoWrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.videoWrapper.flip {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.videoWrapper.flip .videoFrame {
+    order: 2;
+}
+
+.videoFrame {
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.videoFrame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.videoText h2 {
+    font-family: var(--font-Os);
+    font-size: 44px;
+    margin-bottom: 12px;
+}
+
+.videoText p {
+    font-family: var(--font-Open);
+    line-height: 1.6;
+    color: #333333;
+    margin-bottom: 14px;
+}
+
+.timestampList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--font-Open);
+}
+
+.timestampList span {
+    font-family: var(--font-Os);
+    font-size: 19px;
+    color: var(--accent-blue);
+    margin-right: 12px;
+}
+
+/* ============================================================
+   Staff Portal Pages
+   ============================================================ */
+.portalLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.portalLinks a {
+    font-family: var(--font-Open);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bg-color);
+    text-decoration: none;
+    background-color: #f5f7fa;
+    border: 1px solid #e3e6ea;
+    padding: 10px 18px;
+    border-radius: 999px;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.portalLinks a:hover {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+}
+
+/* ============================================================
+   Site Assignments Page
+   ============================================================ */
+.siteGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.siteCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: var(--bg-color);
+    color: var(--text);
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.siteCard h3 {
+    font-family: var(--font-Os);
+    font-size: 28px;
+    color: var(--accent-blue);
+}
+
+.siteArea {
+    font-family: var(--font-Open);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.siteDetails {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--font-Open);
+    font-size: 15px;
+}
+
+.siteDetails li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.siteDetails li span:first-child {
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   Contact Page
+   ============================================================ */
+.contactCard {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.contactInitials {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid var(--accent-blue);
+    font-family: var(--font-Os);
+    font-size: 40px;
+    color: var(--accent-blue);
+}
+
+.contactLabel {
+    font-family: var(--font-Open);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.contactCard h2 {
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.contactCard .btn {
+    overflow-wrap: anywhere;
+}
+
+/* ============================================================
+   Extras Page
+   ============================================================ */
+.qrGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.qrCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #f5f7fa;
+    border-radius: 12px;
+    padding: 26px 16px;
+    text-decoration: none;
+    color: var(--bg-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.qrCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.qrCode {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.qrPlaceholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #c9ced6;
+    font-family: var(--font-Open);
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.qrCard h3 {
+    font-family: var(--font-Os);
+    font-size: 22px;
+}
+
+.qrCard span {
+    font-family: var(--font-Open);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   All Pages
+   ============================================================ */
+.siteFooter {
+    background-color: var(--bg-color);
+    color: var(--text);
+    margin-top: 60px;
+    padding: 50px 250px 24px;
+}
+
+.footerInner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footerBrand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footerLogo {
+    width: 100px;
+}
+
+.footerBrand p {
+    font-family: var(--font-Os);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footerLinks a,
+.footerContact a {
+    font-family: var(--font-Open);
+    font-size: 15px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footerLinks a:hover,
+.footerContact a:hover {
+    color: var(--accent-blue);
+}
+
+.footerContact p {
+    font-family: var(--font-Os);
+    font-size: 18px;
+    color: var(--accent-blue);
+    margin-bottom: 6px;
+}
+
+.footerCopy {
+    font-family: var(--font-Open);
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+/* ============================================================
+   All Pages
+   ============================================================ */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1300px) {
+
+    nav {
+        z-index: 10;
+        height: 60px;
+        padding: 0 20px;
+        align-items: center;
+    }
+
+    .logo-container {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    #logo {
+        width: 70px;
+    }
+
+    .logo-text {
+        font-size: 17px;
+        line-height: 1.2;
+        padding: 0 0 0 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links-wrapper {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+
+    .nav-links-wrapper.open {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        line-height: 1.4;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 20px;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        min-width: 0;
+        box-shadow: none;
+        background-color: rgba(255,255,255,0.06);
+    }
+
+    .dropdown-content a {
+        color: var(--text) !important;
+        padding: 10px 20px 10px 40px;
+        font-size: 15px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgba(255,255,255,0.12);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /* ========================================================
+       All Pages
+       ======================================================== */
+    .text-wrapper,
+    .text {
+        margin: 40px 80px;
+    }
+
+    /* ========================================================
+       YLDP Page
+       ======================================================== */
+    .stat-text {
+        font-size: 28px;
+        padding: 0 12px;
+    }
+
+    .portrait {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* ========================================================
+       Field Trip Page
+       ======================================================== */
+    .tripWrapper,
+    .perms {
+        margin: 40px 80px;
+    }
+
+    /* ========================================================
+       Forms Page
+       ======================================================== */
+    .linkList {
+        margin: 0 80px;
+    }
+
+    /* ========================================================
+       All Pages
+       ======================================================== */
+    .siteFooter {
+        padding: 40px 80px 20px;
+    }
+
+    /* ========================================================
+       Orientation, SC Portal, and Extras Pages
+       ======================================================== */
+    .videoWrapper,
+    .videoWrapper.flip {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .videoWrapper.flip .videoFrame {
+        order: 0;
+    }
+
+    /* ========================================================
+       Orientation and SC Portal Pages
+       ======================================================== */
+    .modelStack li:nth-child(1) { margin: 0 60px; }
+    .modelStack li:nth-child(2) { margin: 0 40px; }
+    .modelStack li:nth-child(3) { margin: 0 20px; }
+
+    /* ========================================================
+       Multiple Pages
+       ======================================================== */
+    .infoGrid.four {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* ========================================================
+       All Pages
+       ======================================================== */
+    .hero-img {
+        height: 65vh;
+    }
+
+    .hero-text-container {
+        width: 90%;
+    }
+
+    .hero-text-container h1 {
+        font-size: clamp(28px, 7vw, 48px);
+    }
+
+    .text-wrapper,
+    .text {
+        margin: 30px 20px;
+    }
+
+    #header-text {
+        font-size: 18px;
+    }
+
+    /* ========================================================
+       YLDP Page
+       ======================================================== */
+    #statIntro,
+    #sum {
+        font-size: 22px;
+        margin: 30px 0 14px;
+    }
+
+    .stat-bar {
+        padding: 20px 6px;
+    }
+
+    .stat-bar-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 0;
+    }
+
+    .stat-text {
+        font-size: 26px;
+        padding: 0 10px;
+    }
+
+    .stat-text:not(:last-child) {
+        border-right: none;
+    }
+
+    .stat-text:nth-child(odd) {
+        border-right: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .metric {
+        font-size: 14px;
+    }
+
+    .chart {
+        padding: 20px 12px 12px;
+    }
+
+    .bars {
+        height: 110px;
+    }
+
+    .bar {
+        width: 20px;
+    }
+
+    .bar-label {
+        font-size: 13px;
+    }
+
+    .teamWrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .teamMember {
+        padding: 16px 8px;
+    }
+
+    .portrait {
+        width: 110px;
+        height: 110px;
+    }
+
+    .teamMember h2 {
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    /* ========================================================
+       Home Page
+       ======================================================== */
+    .primary-contact {
+        width: 90%;
+        height: auto;
+        padding: 16px 12px;
+        text-align: center;
+    }
+
+    .primary-contact h2,
+    .primary-contact h3 {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    /* ========================================================
+       All Pages
+       ======================================================== */
+    iframe {
+        max-width: 100%;
+    }
+
+    /* ========================================================
+       Field Trip Page
+       ======================================================== */
+    .tripWrapper {
+        flex-direction: column;
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    .tripPoster {
+        width: 100%;
+    }
+
+    .perms {
+        margin: 30px 20px;
+    }
+
+    /* ========================================================
+       Forms Page
+       ======================================================== */
+    .linkList {
+        margin: 0 20px;
+    }
+
+    /* ========================================================
+       Field Trip and Forms Pages
+       ======================================================== */
+    .permission {
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+
+    /* ========================================================
+       Multiple Pages
+       ======================================================== */
+    .sectionTitle {
+        font-size: 22px;
+        margin: 36px 0 14px;
+    }
+
+    .sectionNote {
+        font-size: 16px;
+    }
+
+    .darkPanel {
+        padding: 26px 22px;
+    }
+
+    .darkPanel h2 {
+        font-size: 26px;
+    }
+
+    .btnOutline {
+        margin: 12px 0 0;
+    }
+
+    /* ========================================================
+       Mentees Page
+       ======================================================== */
+    .statPanel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .bigStat {
+        font-size: 44px;
+    }
+
+    /* ========================================================
+       School Partners Page
+       ======================================================== */
+    .scheduleList li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    /* ========================================================
+       Orientation and SC Portal Pages
+       ======================================================== */
+    .modelStack li:nth-child(n) {
+        margin: 0;
+    }
+
+    /* ========================================================
+       Multiple Pages
+       ======================================================== */
+    .infoGrid.four {
+        grid-template-columns: 1fr;
+    }
+
+    /* ========================================================
+       Orientation and SC Portal Pages
+       ======================================================== */
+    .modelLayer {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    /* ========================================================
+       Orientation Page
+       ======================================================== */
+    .checkList li {
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+    /* ========================================================
+       Mentees Page
+       ======================================================== */
+    .shiftChart {
+        padding: 20px 16px;
+    }
+
+    .shiftRow {
+        grid-template-columns: 80px 1fr;
+        gap: 6px 12px;
+    }
+
+    .shiftValue {
+        grid-column: 2;
+        text-align: left;
+        font-size: 18px;
+    }
+
+    /* ========================================================
+       Orientation, SC Portal, and Extras Pages
+       ======================================================== */
+    .videoText h2 {
+        font-size: 32px;
+    }
+
+    /* ========================================================
+       Contact Page
+       ======================================================== */
+    .contactCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .contactInitials {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+
+    /* ========================================================
+       All Pages
+       ======================================================== */
+    .siteFooter {
+        padding: 36px 20px 20px;
+    }
+
+    .footerInner {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* ========================================================
+       All Pages
+       ======================================================== */
+    #logo {
+        width: 56px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+
+    #header-text {
+        font-size: 17px;
+    }
+
+    /* ========================================================
+       YLDP Page
+       ======================================================== */
+    .stat-text {
+        font-size: 22px;
+    }
+
+    .metric {
+        font-size: 13px;
+    }
+
+    /* ========================================================
+       Mentees Page
+       ======================================================== */
+    .bigStat {
+        font-size: 38px;
+    }
+}
