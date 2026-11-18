@@ -11,6 +11,10 @@
     padding: 0;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 :root {
     --bg-color: #040404;
     --card: #f3f3f3;
@@ -38,7 +42,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: green;
     top: 0;
     left: 0;
     background: linear-gradient(to top, transparent 0%, var(--bg-color) 95%);
@@ -46,7 +49,7 @@
 }
 
 .hero-text-container {
-    width: 100vh;
+    width: 100%;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -62,10 +65,6 @@
     text-decoration-color: white;
 }
 
-#BMEADev {
-    color: red;
-}
-
 nav {
     justify-content: space-between;
     display: flex;
@@ -78,13 +77,15 @@ nav {
     transition: box-shadow .5s ease-in-out;
 }
 
+
+
 nav:hover {
     transition: box-shadow .5s ease-in-out;
     box-shadow: 0 5px 12px rgba(0,0,0,0.206);
 }
 
 #logo {
-    height: autopx;
+    height: auto;
     width: 100px;
 }
 
@@ -132,7 +133,6 @@ nav:hover {
 
 .nav-links a:visited {
     color: #ffffff;
-    ;
 }
 
 .dropdown {
@@ -162,7 +162,8 @@ nav:hover {
     background-color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
 }
 
@@ -170,26 +171,44 @@ nav:hover {
     margin: 50px 250px;
 }
 
-#header-text {
+.header-text,
+.focus {
     font-family: var(--font-Mont);
     font-size: 23px;
 }
 
+.singles:hover{
+    color:#0f7acb
+}
 /* ============================================================
    Home Page
    ============================================================ */
-.primary-contact {
+.focus {
+    margin-top: 50px;
+}
+
+.focus h2 {
+    font-family: var(--font-Os);
+    font-size: 30px;
+    color: var(--accent-blue);
+    margin-bottom: 16px;
+}
+
+.focusList {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 650px;
-    height: 100px;
-    border: solid;
-    border-radius: 10px;
-    background-color: var(--accent-blue);
-    margin: 0 auto;
-    margin-top: 30px;
+    gap: 16px;
+    margin-top: 24px;
+    padding-left: 28px;
+}
+
+.focusList li {
+    line-height: 1.6;
+    padding-left: 6px;
+}
+
+.focusList li::marker {
+    color: var(--accent-blue);
 }
 
 /* ============================================================
@@ -364,6 +383,10 @@ nav:hover {
     text-align: center;
 }
 
+.teamMember h3{
+    font-family: var(--font-Os)
+}
+
 /* ============================================================
    Field Trip Page
    ============================================================ */
@@ -513,7 +536,7 @@ nav:hover {
 .sourceNote {
     font-family: var(--font-Open);
     font-size: 13px;
-    color: var(--text-muted);
+    color: #5f6368;
     margin-top: 10px;
 }
 
@@ -697,7 +720,7 @@ nav:hover {
     display: block;
     font-family: var(--font-Open);
     font-size: 13px;
-    color: var(--text-muted);
+    color: #5f6368;
 }
 
 /* ============================================================
@@ -749,20 +772,6 @@ nav:hover {
     border-radius: 12px;
 }
 
-.partnerLogo {
-    width: 52px;
-    height: 52px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--bg-color);
-    color: var(--accent-blue);
-    font-family: var(--font-Os);
-    font-size: 22px;
-}
-
 .partnerCard h3 {
     font-family: var(--font-Os);
     font-size: 20px;
@@ -771,7 +780,7 @@ nav:hover {
 .partnerCard p {
     font-family: var(--font-Open);
     font-size: 14px;
-    color: var(--text-muted);
+    color: #5f6368;
 }
 
 /* ============================================================
@@ -1161,7 +1170,7 @@ nav:hover {
    ============================================================ */
 .qrGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 24px;
 }
 
@@ -1191,16 +1200,6 @@ nav:hover {
     object-fit: contain;
     background-color: #ffffff;
     border-radius: 8px;
-}
-
-.qrPlaceholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px dashed #c9ced6;
-    font-family: var(--font-Open);
-    font-size: 13px;
-    color: var(--text-muted);
 }
 
 .qrCard h3 {
@@ -1488,7 +1487,8 @@ nav:hover {
         margin: 30px 20px;
     }
 
-    #header-text {
+    .header-text,
+    .focus {
         font-size: 18px;
     }
 
@@ -1561,22 +1561,6 @@ nav:hover {
     .teamMember h2 {
         font-size: 17px;
         margin-top: 10px;
-    }
-
-    /* ========================================================
-       Home Page
-       ======================================================== */
-    .primary-contact {
-        width: 90%;
-        height: auto;
-        padding: 16px 12px;
-        text-align: center;
-    }
-
-    .primary-contact h2,
-    .primary-contact h3 {
-        font-size: 16px;
-        overflow-wrap: anywhere;
     }
 
     /* ========================================================
@@ -1747,6 +1731,15 @@ nav:hover {
     }
 }
 
+    /* ========================================================
+       COMING SOON
+       ======================================================== */
+    .hero-full .hero-img {
+        height: 100vh;
+        height: 100dvh;
+        display: block;   
+    }
+
 @media (max-width: 480px) {
 
     /* ========================================================
@@ -1760,7 +1753,8 @@ nav:hover {
         font-size: 14px;
     }
 
-    #header-text {
+    .header-text,
+    .focus {
         font-size: 17px;
     }
 
